@@ -1,0 +1,7 @@
+{
+  "name": "Oili",
+  "description": "crude oil chatbot",
+  "repository": "git@github.com:korjani/oili.git",
+  "logo": "",
+  "keywords": ["oil", "chatbot", "price","natural language"]
+}
