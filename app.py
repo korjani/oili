@@ -31,7 +31,7 @@ def webhook():
     return r
 
 def makeWebhookResult(req):
-    if req.get("result").get("action") != "cryptoprice":
+    if req.get("result").get("action") != "price.check":
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
@@ -39,9 +39,9 @@ def makeWebhookResult(req):
 
 
     cost = {'chevron': 'cvx', 'Exxon': 'XOM', 'BP': 'BP', 'TOTAL': 'TOT', 'oil':'CLF18.NYM'}
-    price = yf.download(str(cost[stock]))
+    price = yf.download(cost[stock])
 
-    speech = "The price of " + stock + " is " + price['Close'][-1] + " dollar."
+    speech = "The price of " + stock + " is " + str(round(['Close'][-1])) + " dollar."
 
     print("Response:")
     print(speech)
