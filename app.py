@@ -36,7 +36,6 @@ def makeWebhookResult(req):
     parameters = result.get("parameters")
     stock = parameters.get("price_check")
 
-
     cost = {'chevron': 'cvx', 'Exxon': 'XOM', 'BP': 'BP', 'TOTAL': 'TOT', 'oil':'CLF18.NYM'}
     price = yf.download(cost[stock])
 
