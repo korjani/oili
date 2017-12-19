@@ -10,7 +10,6 @@ from flask import make_response
 
 import fix_yahoo_finance as yf
 
-
 # Flask app should start in global layout
 app = Flask(__name__)
 
@@ -57,5 +56,4 @@ def makeWebhookResult(req):
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
-
     app.run(debug=True, port=port, host='0.0.0.0')
