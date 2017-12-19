@@ -41,7 +41,7 @@ def makeWebhookResult(req):
     cost = {'chevron': 'cvx', 'Exxon': 'XOM', 'BP': 'BP', 'TOTAL': 'TOT', 'oil':'CLF18.NYM'}
     price = yf.download(cost[stock])
 
-    speech = "The price of " + stock + " is " + str(round(['Close'][-1])) + " dollar."
+    speech = "The price of " + stock + " is " + str(round(price['Close'][-1])) + " dollar."
 
     print("Response:")
     print(speech)
