@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-
-import urllib
+# import urllib
 import json
 import os
 
@@ -9,7 +8,6 @@ from flask import request
 from flask import make_response
 
 import fix_yahoo_finance as yf
-
 # Flask app should start in global layout
 app = Flask(__name__)
 
